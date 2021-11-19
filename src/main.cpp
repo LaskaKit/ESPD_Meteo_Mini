@@ -64,7 +64,7 @@
 #define TFT_TILE_BACKGROUND_COLOR_2 0x3314  // blue      0x3314
 #define TFT_TILE_BACKGROUND_COLOR_3 0xDEC0  // yellow    0xDEC0
 #define TFT_TILE_BACKGROUND_COLOR_4 0xD000  // red       0xD000
-#define TFT_LED_PWM                 15     // dutyCycle 0-255 last minimum was 15
+#define TFT_LED_PWM                 100     // dutyCycle 0-255 last minimum was 15
 
 #define BOOT_MESSAGE "booting..."
 #define REFRESH_RATE_MS 60*1000
@@ -385,8 +385,8 @@ void setup() {
   pinMode(ADC, INPUT);
   
   // configure backlight LED PWM functionalitites
-  ledcSetup(0, 5000, 8);              // ledChannel, freq, resolution
-  ledcAttachPin(TFT_LED, 0);          // ledPin, ledChannel
+  ledcSetup(1, 5000, 8);              // ledChannel, freq, resolution
+  ledcAttachPin(TFT_LED, 1);          // ledPin, ledChannel
   ledcWrite(1, TFT_LED_PWM);          // dutyCycle 0-255
   
   display.begin();
