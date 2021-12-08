@@ -3,7 +3,7 @@
  * Read Temperature, Humidity and pressure from Thingspeak and show on the display
  * For settings see config.h
  * 
- * Email:obchod@laskarduino.cz
+ * Email:podpora@laskarduino.cz
  * Web:laskarduino.cz
  * 
  * in User_Setup.h set ESP32 Dev board pinout to 
